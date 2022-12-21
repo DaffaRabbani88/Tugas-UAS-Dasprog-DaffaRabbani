@@ -63,14 +63,110 @@ Contoh kasus yang akan dikerjakan yaitu:
 1.  Menukar nilai baris dan kolom dalam suatu matriks atau bisa disebut sebagai transpose matriks.
 2.	Membuat deret bilangan pada matriks dan mencari sejumlah bilangan yang tidak habis dibagi 3, 5, 7.
 
+## source code 1
+<code>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main(){
+    int baris, kolom;
+    cout << "masukan banyak baris : ";cin >> baris;
+    cout << "masukan banyak kolom : ";cin >> kolom;
+   
+    const int baris_R = baris;
+    const int kolom_R = kolom;
+    int array[baris_R][kolom_R];
+    int tuker[kolom_R][baris_R];
+    cout << "masukan nilai : " << endl;
+   
+    for(int i = 0; i < baris_R; i++){
+        for(int j = 0; j < kolom_R; j++){
+            cout << "baris ke-" << i+1 << " kolom ke-" << j+1 << " : ";
+            cin >> array[i][j]; }
+    }
+    cout << "bentuk awal : " << endl;
+   
+    for(int i = 0; i < baris_R; i++){
+        for(int j = 0; j < kolom_R; j++){
+            cout << array[i][j] << " ";
+        }
+        cout << endl;
+    }
+   
+    for(int i = 0; i < baris_R; i++){
+        for(int j = 0; j < kolom_R; j++){
+            tuker[j][i] = array[i][j];
+        }
+    }
+    cout << "bentuk akhir : " << endl;
+   
+    for(int i = 0; i < kolom_R; i++){
+        for(int j = 0; j < baris_R; j++){
+            cout << tuker[i][j] << " ";
+        }
+        cout << endl;
+    }
+    getch();  
+    getch();         
+    return 0;
+}
+</code>
+
+## source code 2
+<code>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+    int array[20][20], baris, kolom;
+    cout << "masukan jumlah baris : ";cin >> baris;
+    cout << "masukan jumlah kolom : ";cin >> kolom;
+    cout << "masukan nilai : " << endl;
+    
+    for(int i = 0; i < baris ;i++){
+        for(int j = 0; j < kolom ;j++){
+            cout << "masukan nilai baris ke-" << i+1 << " kolom ke-" << j+1 << " : ";
+            cin >> array[i][j];
+        }
+        
+    }
+    cout << "nilai awal :" << endl;
+    
+	for(int i = 0; i < baris ;i++){
+        for(int j = 0; j < kolom ;j++){
+            cout << array[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "nilai akhir :" << endl;
+    
+	for(int i = 0; i < baris ;i++){
+            for(int j = 0; j < kolom ;j++){
+                if(array[i][j]%3 != 0 && array[i][j]%5 != 0 && array[i][j]%7 != 0){
+                    cout << array[i][j] << " ";
+                }
+                else{
+                }
+            }
+    }
+    getch();
+    getch();
+    return 0;
+}
+</code>
 ## Output Program
 
 Soal nomor 1: <br>
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/120996792/208886574-a9ffb56d-aa8d-4f3f-81ee-39c92a82f8ee.png" width="50%">
+   <img src="https://user-images.githubusercontent.com/120996792/208889235-b7c5eb58-5bd6-4486-84e7-43e48c7d7008.png" width="50%">
 </div>
 
 Soal nomor 2:<br>
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/120996792/208886750-58fd6609-9796-41f6-b467-17e446a0646b.png" width="50%">
+   <img src="https://user-images.githubusercontent.com/120996792/208889302-5f88daa4-eeef-409e-b829-7bbb0f3bf5ec.png" width="50%">
 </div>
+
+
